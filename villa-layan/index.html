@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Villa Layan — Organic Architecture Private Villa | Villas Bukit Lipah</title>
+  <meta name="description" content="Villa Layan – organic architecture private villa with panoramic sea and mountain views. 3 bedrooms, infinity pool, secluded in the hills of Lipah, Bali.">
+  <link rel="icon" href="https://villasbukit.com/wp-content/uploads/2020/02/cropped-cropped-LogoEmbleme-32x32.png" sizes="32x32">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- warm up Smoobu's origins early so the booking tool + calendar load faster -->
+  <link rel="preconnect" href="https://login.smoobu.com">
+  <link rel="preconnect" href="https://booking.smoobu.com">
+  <link rel="dns-prefetch" href="https://login.smoobu.com">
+  <link rel="dns-prefetch" href="https://booking.smoobu.com">
+  <!-- the booking tool serially loads jQuery then iframe-resizer (from cdnjs) before it can
+       size + reveal the search bar; warm cdnjs and preload both so the bar appears fast on cold loads -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="preload" as="script" href="https://login.smoobu.com/js/limitless/core/libraries/jquery.min.js">
+  <link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.16/iframeResizer.min.js">
+  <link rel="stylesheet" href="../css/style.css?v=3">
+</head>
+<body data-villa="layan">
+
+<!-- ============ NAV ============ -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="https://villasbukit.com/" class="nav-logo" aria-label="Villas Bukit Lipah">
+      <img class="nav-logo-mark" src="../images/logo-palm.svg" alt="" aria-hidden="true">
+      <span class="nav-logo-text">Villas<br>Bukit</span>
+    </a>
+    <div class="nav-menu">
+      <a href="https://villasbukit.com/virtual-tour/">Villas 360°</a>
+      <div class="nav-item-dropdown">
+        <a href="https://villasbukit.com/our-villas/">Villas<i class="nav-caret"></i></a>
+        <div class="dropdown-menu">
+          <a href="https://villasbukit.com/villa-fire/">Villa Fire</a>
+          <a href="https://villasbukit.com/villa-air/">Villa Air</a>
+          <a href="https://villasbukit.com/villa-earth/">Villa Earth</a>
+          <a href="https://villasbukit.com/villa-water/">Villa Water</a>
+          <a href="https://villasbukit.com/spirit-villa/">Villa Spirit</a>
+        </div>
+      </div>
+      <a href="https://villasbukit.com/restaurant/">Restaurant</a>
+      <a href="https://villasbukit.com/welness-and-spa/">Spa &amp; Wellness</a>
+      <a href="https://villasbukit.com/yoga-shala/">Yoga Shala</a>
+      <a href="https://villasbukit.com/transport-trips-and-travel/">Trips</a>
+      <a href="https://villasbukit.com/packages/">Packages</a>
+      <div class="nav-item-dropdown">
+        <a href="./" class="active">Partner Villas<i class="nav-caret"></i></a>
+        <div class="dropdown-menu">
+          <a href="../villa-sana/">Villa Sana</a>
+          <a href="./">Villa Layan</a>
+        </div>
+      </div>
+      <a href="https://villasbukit.com/contact/">Contact</a>
+    </div>
+    <div class="nav-right">
+      <button class="btn btn-gold btn-sm nav-cta desktop" data-open-booking>Book Now</button>
+      <button class="btn btn-gold btn-sm nav-cta mobile" data-open-booking>Book Now</button>
+      <div class="nav-burger" id="burger" aria-label="Menu" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="https://villasbukit.com/virtual-tour/">Villas 360°</a>
+  <a href="https://villasbukit.com/our-villas/" class="m-toggle">Villas</a>
+  <div class="m-sub">
+    <a href="https://villasbukit.com/villa-fire/">Villa Fire</a>
+    <a href="https://villasbukit.com/villa-air/">Villa Air</a>
+    <a href="https://villasbukit.com/villa-earth/">Villa Earth</a>
+    <a href="https://villasbukit.com/villa-water/">Villa Water</a>
+    <a href="https://villasbukit.com/spirit-villa/">Villa Spirit</a>
+  </div>
+  <a href="https://villasbukit.com/restaurant/">Restaurant</a>
+  <a href="https://villasbukit.com/welness-and-spa/">Spa &amp; Wellness</a>
+  <a href="https://villasbukit.com/yoga-shala/">Yoga Shala</a>
+  <a href="https://villasbukit.com/transport-trips-and-travel/">Trips</a>
+  <a href="https://villasbukit.com/packages/">Packages</a>
+  <a href="./" class="m-toggle active">Partner Villas</a>
+  <div class="m-sub">
+    <a href="../villa-sana/">Villa Sana</a>
+    <a href="./">Villa Layan</a>
+  </div>
+  <a href="https://villasbukit.com/contact/">Contact</a>
+  <button class="btn btn-gold" data-open-booking>Book Now</button>
+</div>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="hero-bg" style="background-image:url('../images/villa-layan/main.webp')"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <nav class="breadcrumb">
+        <a href="https://villasbukit.com/">Home</a><span>›</span>
+        Partner Villas<span>›</span>Villa Layan
+      </nav>
+      <h1>Villa Layan</h1>
+      <p class="hero-sub">Organic architecture private villa with panoramic sea and mountain views</p>
+      <div class="hero-specs">
+        <div class="hero-spec">
+          <svg viewBox="0 0 24 24"><path d="M3 17v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4M3 17h18M3 17v3M21 17v3M6 11V8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3"/></svg>
+          3 Bedrooms
+        </div>
+        <div class="hero-spec">
+          <svg viewBox="0 0 24 24"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-3ZM6 12V6a2 2 0 0 1 2-2 2 2 0 0 1 2 2M7 19l-1 2M18 19l1 2"/></svg>
+          3 Bathrooms
+        </div>
+        <div class="hero-spec">
+          <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0M16 6a3 3 0 0 1 0 6M21 20a5.5 5.5 0 0 0-4-5.3"/></svg>
+          6 Guests
+        </div>
+      </div>
+      <div class="hero-buttons">
+        <button class="btn btn-gold" data-open-booking>Check Availability</button>
+        <a href="#gallery" class="btn btn-ghost">View Gallery</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ CHECK AVAILABILITY ============ -->
+<section class="availability" id="booking">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Check Availability</span>
+      <span class="best">Best price guaranteed</span>
+    </div>
+
+    <div class="avail-grid">
+      <div class="availability-main">
+
+      <!-- real Smoobu booking tool — search bar sits directly above the calendar
+           (per Laptopview.png); self-initialises, themed via Smoobu CSS variables -->
+      <div class="booking-tool" id="apartmentIframeLayan">
+        <script type="text/javascript" src="https://login.smoobu.com/js/Settings/BookingToolIframe.js"></script>
+        <script>BookingToolIframe.initialize({"url": "https://login.smoobu.com/en/booking-tool/iframe/1754582?apartmentGroups[]=3327807", "baseUrl": "https://login.smoobu.com", "target": "#apartmentIframeLayan"})</script>
+      </div>
+
+      <!-- Smoobu calendar (kept from Smoobu, restyled) — availability overview -->
+      <div class="calendar-wrap reveal" id="calWrap">
+        <div id="smoobuApartment3327807de" class="calendarWidget">
+          <div class="calendarContent"
+            data-load-calendar-url="https://login.smoobu.com/en/cockpit/widget/single-calendar/3327807"
+            data-verification="f1a49fb32430e49b56df821ab003125f1d9bfb62e5f1f7b851524385f10afc27"
+            data-baseUrl="https://login.smoobu.com"
+            data-disable-css="false">
+          </div>
+          <script type="text/javascript" src="https://login.smoobu.com/js/Apartment/CalendarWidget.js"></script>
+        </div>
+        <div class="cal-legend">
+          <span><i class="av"></i>Available</span>
+          <span><i class="na"></i>Not available</span>
+          <span><i class="li"></i>Available from 13:00</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- amenities (gold line icons) -->
+    <aside class="amenities reveal-r">
+      <div class="amenity">
+        <svg viewBox="0 0 24 24"><path d="M5 12.5a10 10 0 0 1 14 0M8 16a5.5 5.5 0 0 1 8 0"/><circle cx="12" cy="19.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+        <span>Wi-Fi</span>
+      </div>
+      <div class="amenity">
+        <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 16V8h3.2a2.4 2.4 0 0 1 0 4.8H9"/></svg>
+        <span>Parking</span>
+      </div>
+      <div class="amenity">
+        <svg viewBox="-20 0 190 190" class="ico-fill"><path fill-rule="evenodd" clip-rule="evenodd" d="M90.8601 125.51C85.4101 132.65 65.8601 132.99 59.2501 126.07C53.0601 133.18 31.6601 133.99 24.6801 120.39L28.8401 115.83C35.0501 125.42 51.3701 126.45 58.6601 115.83C59.1215 115.778 59.5856 115.751 60.0501 115.75C64.7901 123.75 78.19 125.34 85.7701 120.1C85.69 109.88 85.4501 79.1001 85.4501 76.7001C85.4501 56.5301 112.86 57.8301 111.28 78.6001L105.18 79.1301C105.18 68.4901 93.8701 69.0401 93.8601 76.7901C93.8601 78.8901 94.0701 109.27 94.1401 118.38C101.88 124.81 114.83 123.91 121.36 116.06L125.36 119.67C118.74 133.64 98.7701 133.21 90.8601 125.51ZM73.4901 103.9C67.3801 103.82 58.0401 103.84 52.7201 103.9C52.7801 109.63 52.8301 113.9 52.8301 113.9L44.5301 116.34C44.5301 116.34 44.1801 79.7801 44.1801 76.7501C44.1801 56.5801 71.8701 57.5401 70.2901 77.3901L63.9201 78.6301C63.9201 67.2501 52.5001 69.5201 52.5001 76.6301C52.5001 80.8601 52.5601 88.7301 52.6401 96.1501L80.9201 95.8301C80.9201 95.8301 82.4701 104 73.4901 103.9ZM58.6601 133C59.1215 132.946 59.5855 132.916 60.0501 132.91C65.8301 142.62 84.4801 142.91 89.7601 132.85H91.4901C98.4901 142.15 114.01 142.09 121.36 133.26L125.36 136.87C118.78 150.87 98.8101 150.41 90.9001 142.71C85.4501 149.85 65.9001 150.18 59.2901 143.27C53.1001 150.38 31.7001 151.18 24.7201 137.59L28.8401 133C35.0501 142.62 51.3701 143.65 58.6601 133Z"/></svg>
+        <span>Infinity Pool</span>
+      </div>
+      <div class="amenity">
+        <svg viewBox="0 0 512 512" class="ico-fill"><g> <path d="M139.7469025,326.0671082c11.5529022,0,22.6884003-2.4421082,32.9447937-6.9425964 c0.1240082-0.0500183,0.2556-0.0395203,0.3774109-0.0991211c0.0807953-0.039978,0.1274872-0.1152039,0.2050934-0.1576843 c7.8430023-3.5155945,15.1763-8.2070923,21.6934052-14.1325989c15.1696014,13.7937012,34.5816956,21.3320007,55.2179871,21.3320007 c22.2089996,0,43.3050995-8.9454956,58.7597198-24.7362976c8.2817993,8.4604797,18.2124023,14.8800964,29.036377,19.0871887 c0.0403137,0.021698,0.0620117,0.0614929,0.1028137,0.0820007c0.4533997,0.2326965,0.9248047,0.3725891,1.4003906,0.4656067 c8.9482117,3.2789917,18.4599915,5.1015015,28.2225952,5.1015015c24.2138977,0,47.1058044-10.6322937,62.803009-29.1755066 c1.8911133-2.2351074,1.6142883-5.5773926-0.6207886-7.4709167c-2.2272949-1.8832703-5.5801086-1.6142883-7.466095,0.6206055 c-13.6821289,16.1632996-33.625,25.4295959-54.7161255,25.4295959c-6.789978,0-13.4291992-1.0578003-19.8104858-2.9000854 c5.5614929-12.6601868,8.3837891-26.1499023,8.3837891-40.1931152c0-55.292984-44.9841003-100.2797852-100.2797852-100.2797852 c-55.2954102,0-100.2825012,44.9868011-100.2825012,100.2797852c0,13.5686035,2.6381989,26.6467285,7.8500977,38.9614258 c-7.5559082,2.6654968-15.5617065,4.1317749-23.821701,4.1317749c-19.0270996,0-36.9570999-7.388092-50.483902-20.8089905 c-2.0799026-2.0646973-5.4380035-2.0541992-7.4919968,0.0307007c-2.0617065,2.074707-2.046402,5.4326172,0.0309982,7.4916992 C97.3262024,317.5871887,117.9055023,326.0671082,139.7469025,326.0671082z M256.0010071,182.6941071 c49.452179,0,89.6835938,40.2318878,89.6835938,89.6835785c0,12.7956238-2.6223145,25.0720215-7.7778015,36.5742188 c-9.4641113-4.3395996-17.9956055-10.7346191-24.9182129-18.910614c-2.0126953-2.3798828-6.0739746-2.3693848-8.0867004,0 c-13.6820984,16.1632996-33.625,25.4295959-54.7162933,25.4295959c-19.5131989,0-37.7717896-7.7398987-51.4152985-21.7975769 c-0.998291-1.0295105-2.3694-1.6087952-3.8026886-1.6087952c-1.4334106,0-2.8045044,0.5792847-3.8003082,1.6087952 c-5.285202,5.444397-11.2761993,9.9133911-17.7507935,13.3796997c-4.621109-10.9712219-7.1018066-22.5825195-7.1018066-34.6753235 C166.3146973,222.9259949,206.5467072,182.6941071,256.0010071,182.6941071z"/> <path d="M422.4236145,340.6366882c-13.6821289,16.1631165-33.625,25.429718-54.7161255,25.429718 c-21.0912781,0-41.0340881-9.2666016-54.7189026-25.429718c-2.0126953-2.3800964-6.0739746-2.3695984-8.0867004,0 c-13.6820984,16.1631165-33.625,25.429718-54.7162933,25.429718c-19.5131989,0-37.7717896-7.7402039-51.4152985-21.797821 c-0.998291-1.0292969-2.3694-1.6091919-3.8026886-1.6091919c-1.4334106,0-2.8045044,0.579895-3.8003082,1.6091919 c-13.6463013,14.0576172-31.9073029,21.797821-51.4203949,21.797821c-19.0270996,0-36.9570999-7.3883972-50.483902-20.8096008 c-2.0799026-2.064209-5.4380035-2.0484924-7.4919968,0.0310059c-2.0617065,2.0749817-2.046402,5.4328918,0.0309982,7.4919739 c15.5242004,15.4026184,36.1035004,23.8826294,57.9449005,23.8826294c20.6362,0,40.0482941-7.5384216,55.2207031-21.3321228 c15.1696014,13.7937012,34.5816956,21.3321228,55.2179871,21.3321228c22.2089996,0,43.3050995-8.9456177,58.7597198-24.7364197 c15.4565735,15.790802,36.5534973,24.7364197,58.7621765,24.7364197c24.2138977,0,47.1058044-10.6324158,62.803009-29.1753235 c1.8911133-2.2353821,1.6142883-5.5776978-0.6207886-7.4711914 C427.6624146,338.1325989,424.3096008,338.4016113,422.4236145,340.6366882z"/> <path d="M422.4236145,391.2319031c-13.6821289,16.1633911-33.625,25.4295044-54.7161255,25.4295044 c-21.0912781,0-41.0340881-9.2661133-54.7189026-25.4295044c-2.0126953-2.3797913-6.0739746-2.3695984-8.0867004,0 c-13.6820984,16.1633911-33.625,25.4295044-54.7162933,25.4295044c-19.5131989,0-37.7717896-7.7400208-51.4152985-21.7973938 c-0.998291-1.0298157-2.3694-1.6089172-3.8026886-1.6089172c-1.4334106,0-2.8045044,0.5791016-3.8003082,1.6089172 c-13.6463013,14.057373-31.9073029,21.7973938-51.4203949,21.7973938c-19.0270996,0-36.9570999-7.3882141-50.483902-20.8091125 c-2.0799026-2.0644836-5.4380035-2.0491028-7.4919968,0.0310059c-2.0617065,2.074707-2.046402,5.4325867,0.0309982,7.4916992 c15.5242004,15.4025879,36.1035004,23.8825989,57.9449005,23.8825989c20.6362,0,40.0482941-7.5380859,55.2207031-21.3317871 c15.1696014,13.7937012,34.5816956,21.3317871,55.2179871,21.3317871c22.2089996,0,43.3050995-8.9455872,58.7597198-24.7363892 c15.4565735,15.790802,36.5534973,24.7363892,58.7621765,24.7363892c24.2138977,0,47.1058044-10.6323853,62.803009-29.175293 c1.8911133-2.2354126,1.6142883-5.5773926-0.6207886-7.4711914 C427.6624146,388.7278137,424.3096008,388.9967957,422.4236145,391.2319031z"/> <path d="M256.0010071,142.1309052c2.9259949,0,5.2982788-2.3699036,5.2982788-5.298111V90.0402985 c0-2.9284973-2.3722839-5.2978973-5.2982788-5.2978973c-2.9258118,0-5.2978058,2.3694-5.2978058,5.2978973v46.7924957 C250.7032013,139.7610016,253.0751953,142.1309052,256.0010071,142.1309052z"/> <path d="M173.7597961,167.7209015c1.0348969,1.0346985,2.3901062,1.552002,3.746109,1.552002 c1.3551941,0,2.7108917-0.5173035,3.7455902-1.552002c2.0696106-2.069809,2.0696106-5.4223022,0-7.4918976l-33.0868988-33.0869064 c-2.069397-2.0695953-5.4221039-2.0695953-7.4916992,0c-2.0695953,2.069603-2.0695953,5.4220963,0,7.4917068 L173.7597961,167.7209015z"/> <path d="M334.4938965,169.2729034c1.3554993,0,2.7109985-0.5173035,3.7459106-1.552002l33.0892944-33.0870972 c2.0696106-2.0696106,2.0696106-5.4221039,0-7.4917068c-2.0693054-2.0695953-5.421814-2.0695953-7.491394,0l-33.0895996,33.0869064 c-2.0696106,2.0695953-2.0696106,5.4220886,0,7.4918976C331.7827148,168.7556,333.1382141,169.2729034,334.4938965,169.2729034z"/> <path d="M377.9363098,220.2097015h46.7948914c2.9260864,0,5.2980957-2.3699036,5.2980957-5.2980957 c0-2.9282074-2.3720093-5.298111-5.2980957-5.298111h-46.7948914c-2.9259949,0-5.2980957,2.3699036-5.2980957,5.298111 C372.6382141,217.839798,375.0103149,220.2097015,377.9363098,220.2097015z"/> <path d="M87.2710037,220.2097015h46.7925034c2.9257965,0,5.2980957-2.3699036,5.2980957-5.2980957 c0-2.9282074-2.3722992-5.298111-5.2980957-5.298111H87.2710037c-2.9260025,0-5.2981033,2.3699036-5.2981033,5.298111 C81.9729004,217.839798,84.3450012,220.2097015,87.2710037,220.2097015z"/> </g></svg>
+        <span>Ocean View</span>
+      </div>
+      <div class="amenity">
+        <svg viewBox="0 0 24 24"><path d="M4 11l8-6 8 6M6 10v9h12v-9"/><path d="M10 19v-4h4v4"/></svg>
+        <span>Private Villa</span>
+      </div>
+      <div class="amenity">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="6" r="2.5"/><path d="M8 19v-4.6a4 4 0 0 1 8 0V19"/><circle cx="5" cy="8.6" r="1.9"/><path d="M2.2 18.5v-3.1a2.9 2.9 0 0 1 5-2"/><circle cx="19" cy="8.6" r="1.9"/><path d="M21.8 18.5v-3.1a2.9 2.9 0 0 0-5-2"/></svg>
+        <span>Family Friendly</span>
+      </div>
+      <div class="amenity">
+        <svg viewBox="0 0 35.8 35.8" class="ico-fill"><g> <path d="M33.212,26.16l-3.054-1.764l1.84-1.062c0.238-0.139,0.32-0.441,0.184-0.684c-0.14-0.238-0.445-0.322-0.684-0.183 L29.16,23.82l-2.32-1.34l4.729-2.73c0.239-0.139,0.321-0.441,0.184-0.684c-0.139-0.238-0.445-0.322-0.684-0.183l-5.23,3.019 l-3.619-2.09l4.352-1.918l-4.354-1.919l3.619-2.091l5.231,3.021c0.079,0.047,0.165,0.067,0.25,0.067 c0.174,0,0.342-0.091,0.435-0.25c0.139-0.239,0.057-0.546-0.184-0.683l-4.731-2.732l2.32-1.34L31.5,13.32 c0.079,0.046,0.165,0.066,0.25,0.066c0.173,0,0.341-0.09,0.435-0.25c0.138-0.238,0.056-0.545-0.184-0.682L30.16,11.39l3.052-1.762 c0.239-0.139,0.32-0.443,0.184-0.684c-0.14-0.238-0.446-0.322-0.684-0.184l-3.051,1.763L29.66,8.401c0-0.275-0.225-0.5-0.5-0.5 c-0.276,0-0.5,0.225-0.5,0.5l0.001,2.699l-2.32,1.34l0.001-5.46c0-0.276-0.224-0.5-0.5-0.5c-0.275,0-0.5,0.224-0.5,0.5 l-0.001,6.037l-3.619,2.09l0.515-4.728l-3.838,2.81V9.008l5.229-3.021c0.238-0.138,0.32-0.443,0.184-0.684 c-0.14-0.238-0.445-0.321-0.684-0.182l-4.729,2.73V5.173l2.339-1.352c0.239-0.138,0.321-0.443,0.184-0.684 c-0.14-0.238-0.445-0.322-0.684-0.182L18.399,4.02V0.5c0-0.276-0.224-0.5-0.5-0.5s-0.5,0.224-0.5,0.5v3.523L15.56,2.961 c-0.24-0.141-0.545-0.057-0.683,0.184c-0.138,0.239-0.056,0.545,0.183,0.684l2.339,1.352v2.678l-4.729-2.73 c-0.24-0.14-0.545-0.057-0.683,0.184c-0.138,0.239-0.056,0.545,0.183,0.684l5.229,3.02v4.184l-3.837-2.811l0.514,4.729 l-3.621-2.092V6.989c0-0.276-0.224-0.5-0.5-0.5c-0.276,0-0.5,0.224-0.5,0.5v5.462l-2.318-1.34L7.136,8.41 c0-0.277-0.224-0.5-0.5-0.5c-0.276,0-0.5,0.223-0.5,0.5l0.001,2.125L3.084,8.771C2.845,8.63,2.539,8.714,2.401,8.955 C2.263,9.194,2.345,9.5,2.584,9.638L5.636,11.4l-1.839,1.062c-0.239,0.139-0.321,0.443-0.183,0.684 c0.093,0.16,0.261,0.25,0.434,0.25c0.085,0,0.171-0.021,0.25-0.066l2.339-1.351l2.319,1.339l-4.729,2.73 c-0.239,0.139-0.321,0.443-0.183,0.684c0.093,0.16,0.261,0.25,0.434,0.25c0.085,0,0.171-0.021,0.25-0.066l5.23-3.021l3.622,2.091 l-4.352,1.919l4.351,1.919l-3.621,2.09l-5.231-3.018c-0.241-0.138-0.545-0.058-0.683,0.184c-0.138,0.24-0.056,0.545,0.183,0.686 l4.731,2.729l-2.321,1.34l-2.338-1.352c-0.239-0.142-0.545-0.058-0.683,0.184c-0.138,0.238-0.056,0.545,0.183,0.684l1.838,1.062 l-3.05,1.76c-0.239,0.139-0.321,0.443-0.183,0.684c0.093,0.16,0.261,0.25,0.434,0.25c0.085,0,0.171-0.021,0.25-0.065l3.051-1.763 L6.14,27.4c0,0.276,0.224,0.5,0.5,0.5l0,0c0.276,0,0.5-0.225,0.5-0.5l-0.001-2.701l2.322-1.34l-0.002,5.463 c0,0.277,0.224,0.5,0.5,0.5s0.5-0.223,0.5-0.5l0.002-6.041l3.619-2.09l-0.514,4.729l3.837-2.81v4.183l-5.228,3.021 c-0.239,0.139-0.321,0.442-0.183,0.684c0.138,0.236,0.444,0.318,0.683,0.184l4.728-2.73v2.679l-2.339,1.353 c-0.239,0.139-0.321,0.442-0.183,0.684c0.138,0.236,0.444,0.32,0.683,0.184l1.839-1.062V35.3c0,0.274,0.224,0.5,0.5,0.5 s0.5-0.226,0.5-0.5v-3.524l1.841,1.062c0.079,0.046,0.165,0.066,0.25,0.066c0.174,0,0.342-0.09,0.435-0.25 c0.139-0.239,0.057-0.545-0.184-0.684l-2.341-1.354v-2.678l4.729,2.73c0.079,0.046,0.165,0.066,0.25,0.066 c0.174,0,0.342-0.09,0.435-0.25c0.139-0.239,0.057-0.545-0.184-0.684l-5.229-3.021V22.6l3.838,2.811l-0.514-4.729l3.62,2.09v6.039 c0,0.276,0.224,0.5,0.5,0.5c0.275,0,0.5-0.224,0.5-0.5V23.35l2.318,1.34l0.001,2.699c0,0.275,0.225,0.5,0.5,0.5s0.5-0.225,0.5-0.5 l-0.001-2.123l3.053,1.764c0.079,0.045,0.165,0.066,0.25,0.066c0.174,0,0.342-0.09,0.435-0.25 C33.536,26.604,33.454,26.296,33.212,26.16z M20.997,23.259l-2.6-1.901l-0.499-0.363l-0.501,0.365l-2.598,1.9l0.348-3.201 l0.067-0.615l-0.567-0.25l-2.945-1.299l2.946-1.299l0.566-0.25l-0.067-0.616l-0.348-3.2l2.598,1.901l0.5,0.364l0.5-0.365l2.6-1.901 l-0.349,3.201l-0.066,0.616l0.564,0.249l2.946,1.3l-2.944,1.299l-0.566,0.25l0.066,0.615L20.997,23.259z"/> </g></svg>
+        <span>Air Conditioning</span>
+      </div>
+    </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT + GALLERY ============ -->
+<section class="about" id="gallery">
+  <div class="container">
+    <div class="about-text reveal-l">
+      <span class="eyebrow">About the Villa</span>
+      <h2>Privacy. Silence.<br>Tropical Living.</h2>
+      <p>Hidden high above Lipah Bay, Villa Layan is a private tropical retreat designed for guests seeking peace, panoramic views and authentic island living.</p>
+      <p>Surrounded by lush greenery and overlooking the sea, the villa offers complete privacy, spacious open living areas and a calm atmosphere far from crowded tourist areas.</p>
+      <p>Crafted from natural wood and stone, Villa Layan combines organic architecture with the warmth and comfort of relaxed tropical living.</p>
+      <a href="#gallery" class="text-link">Discover More →</a>
+    </div>
+    <div class="gallery-block">
+      <div class="gallery" id="galleryGrid">
+        <div class="gallery-item reveal"><img src="../images/villa-layan/art-enso-2026-76-thumb.webp" data-full="../images/villa-layan/art-enso-2026-76.webp" alt="Villa Layan infinity pool at golden hour" loading="lazy"></div>
+        <div class="gallery-item reveal" data-d="1"><img src="../images/villa-layan/art-enso-2026-6-1-thumb.webp" data-full="../images/villa-layan/art-enso-2026-6-1.webp" alt="Pool terrace with panoramic sea view" loading="lazy"></div>
+        <div class="gallery-item reveal" data-d="2"><img src="../images/villa-layan/1-thumb.webp" data-full="../images/villa-layan/1.webp" alt="Open-air living terrace with ocean view" loading="lazy"></div>
+        <div class="gallery-item reveal" data-d="3"><img src="../images/villa-layan/rznv-enso-2026-59-thumb.webp" data-full="../images/villa-layan/rznv-enso-2026-59.webp" alt="Master bedroom with panoramic view" loading="lazy"></div>
+        <div class="gallery-item reveal" data-d="4"><img src="../images/villa-layan/art-enso-2026-73-thumb.webp" data-full="../images/villa-layan/art-enso-2026-73.webp" alt="Open-plan living and dining area" loading="lazy"></div>
+        <div class="gallery-item reveal" data-d="5"><img src="../images/villa-layan/rznv-enso-2026-76-thumb.webp" data-full="../images/villa-layan/rznv-enso-2026-76.webp" alt="Designer bathroom with sea view" loading="lazy"></div>
+        <!-- remaining photos — cycle in the lightbox via "View Full Gallery" -->
+        <img hidden data-full="../images/villa-layan/11.webp" alt="Villa Layan">
+        <img hidden data-full="../images/villa-layan/12.webp" alt="Villa Layan">
+        <img hidden data-full="../images/villa-layan/14.webp" alt="Villa Layan">
+        <img hidden data-full="../images/villa-layan/2.webp" alt="Villa Layan">
+        <img hidden data-full="../images/villa-layan/3.webp" alt="Villa Layan">
+        <img hidden data-full="../images/villa-layan/4.webp" alt="Villa Layan">
+        <img hidden data-full="../images/villa-layan/8.webp" alt="Villa Layan">
+        <img hidden data-full="../images/villa-layan/a4f466fe-4e78-4092-87ba-4b633708cfd1.webp" alt="Villa Layan">
+        <img hidden data-full="../images/villa-layan/art-enso-2026-10.webp" alt="Villa Layan">
+        <img hidden data-full="../images/villa-layan/art-enso-2026-24.webp" alt="Villa Layan">
+        <img hidden data-full="../images/villa-layan/art-enso-2026-32.webp" alt="Villa Layan">
+        <img hidden data-full="../images/villa-layan/art-enso-2026-39.webp" alt="Villa Layan">
+        <img hidden data-full="../images/villa-layan/art-enso-2026-50.webp" alt="Villa Layan">
+        <img hidden data-full="../images/villa-layan/art-enso-2026-54.webp" alt="Villa Layan">
+        <img hidden data-full="../images/villa-layan/art-enso-2026-6.webp" alt="Villa Layan">
+        <img hidden data-full="../images/villa-layan/art-enso-2026-80.webp" alt="Villa Layan">
+        <img hidden data-full="../images/villa-layan/rznv-enso-2026-000.webp" alt="Villa Layan">
+        <img hidden data-full="../images/villa-layan/rznv-enso-2026-001.webp" alt="Villa Layan">
+        <img hidden data-full="../images/villa-layan/rznv-enso-2026-0011.webp" alt="Villa Layan">
+        <img hidden data-full="../images/villa-layan/rznv-enso-2026-002.webp" alt="Villa Layan">
+        <img hidden data-full="../images/villa-layan/rznv-enso-2026-003.webp" alt="Villa Layan">
+        <img hidden data-full="../images/villa-layan/rznv-enso-2026-004.webp" alt="Villa Layan">
+        <img hidden data-full="../images/villa-layan/rznv-enso-2026-008.webp" alt="Villa Layan">
+        <img hidden data-full="../images/villa-layan/rznv-enso-2026-103.webp" alt="Villa Layan">
+        <img hidden data-full="../images/villa-layan/rznv-enso-2026-105.webp" alt="Villa Layan">
+        <img hidden data-full="../images/villa-layan/rznv-enso-2026-22.webp" alt="Villa Layan">
+        <img hidden data-full="../images/villa-layan/rznv-enso-2026-33.webp" alt="Villa Layan">
+        <img hidden data-full="../images/villa-layan/rznv-enso-2026-40.webp" alt="Villa Layan">
+        <img hidden data-full="../images/villa-layan/rznv-enso-2026-54.webp" alt="Villa Layan">
+        <img hidden data-full="../images/villa-layan/rznv-enso-2026-63.webp" alt="Villa Layan">
+        <img hidden data-full="../images/villa-layan/rznv-enso-2026-66.webp" alt="Villa Layan">
+        <img hidden data-full="../images/villa-layan/rznv-enso-2026-73.webp" alt="Villa Layan">
+        <img hidden data-full="../images/villa-layan/rznv-enso-2026-84.webp" alt="Villa Layan">
+        <img hidden data-full="../images/villa-layan/rznv-enso-2026-90.webp" alt="Villa Layan">
+        <img hidden data-full="../images/villa-layan/rznv-enso-2026-91.webp" alt="Villa Layan">
+      </div>
+      <div class="gallery-cta">
+        <button class="btn btn-gold-outline" id="viewFullGallery">View Full Gallery</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INFO ROW ============ -->
+<section class="info">
+  <div class="container">
+    <!-- Pricing -->
+    <div class="info-col reveal">
+      <span class="eyebrow">Pricing &amp; Packages</span>
+      <div class="price-row">
+        <div class="price-label">Villa price<small>Minimum stay 2 nights</small></div>
+        <div class="price-val">260€ <span>/ night</span></div>
+      </div>
+      <div class="price-row">
+        <div class="price-label">For stays of 6 nights or more<small>10% discount</small></div>
+        <div class="price-val">234€ <span>/ night</span></div>
+      </div>
+      <div class="price-row">
+        <div class="price-label">For stays of 13 nights or more<small>20% discount</small></div>
+        <div class="price-val">208€ <span>/ night</span></div>
+      </div>
+      <div class="promo">
+        <div class="promo-text">Special discount with code <b>“EARLY26”</b></div>
+        <div class="promo-badge">20% off</div>
+      </div>
+    </div>
+
+    <!-- Includes -->
+    <div class="info-col reveal" data-d="1">
+      <span class="eyebrow">The Price Includes</span>
+      <ul class="includes">
+        <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Daily breakfast</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Scooter</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Drinking water</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Laundry service</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>High-speed Wi-Fi</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Daily housekeeping</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Air conditioning</li>
+      </ul>
+    </div>
+
+    <!-- Location -->
+    <div class="info-col reveal" data-d="2">
+      <span class="eyebrow">Location</span>
+      <div class="loc-head">Secluded in the hills of Lipah</div>
+      <p class="loc-sub">Just a short drive from the beach and local village.</p>
+      <div class="loc-item"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>5 min to Lipah Beach</div>
+      <div class="loc-item"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>10 min to Amed</div>
+      <div class="loc-item"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>2.5 h to Ngurah Rai Airport</div>
+      <a href="https://www.google.com/maps/search/Lipah+Amed+Bali" target="_blank" rel="noopener" class="info-link loc-map">View on Map →</a>
+    </div>
+
+    <!-- Cancellation -->
+    <div class="info-col reveal" data-d="3">
+      <span class="eyebrow">Cancellation Policy</span>
+      <p>The guest can cancel free of charge until 60 days before arrival.</p>
+      <p>The guest will be charged 50% of the total price if they cancel within 60 days before arrival.</p>
+      <p>If the guest doesn’t show up, the total reservation amount will be charged.</p>
+      <a href="https://villasbukit.com/terms-policies/" target="_blank" rel="noopener" class="info-link">Read Full Policy →</a>
+    </div>
+
+    <!-- Payment + Questions -->
+    <div class="info-col reveal" data-d="4">
+      <span class="eyebrow">Payment</span>
+      <p>We accept Mastercard, VISA, credit or debit card, cash and bank transfer.</p>
+      <div class="pay-cards">
+        <svg viewBox="0 0 48 32" aria-label="VISA"><rect width="48" height="32" rx="4" fill="#fff" stroke="#E8E2D9"/><text x="24" y="21" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="13" fill="#1A1F71" letter-spacing="1">VISA</text></svg>
+        <svg viewBox="0 0 48 32" aria-label="Mastercard"><rect width="48" height="32" rx="4" fill="#fff" stroke="#E8E2D9"/><circle cx="20" cy="16" r="8" fill="#EB001B"/><circle cx="28" cy="16" r="8" fill="#F79E1B"/><path d="M24 10a8 8 0 0 1 0 12 8 8 0 0 1 0-12Z" fill="#FF5F00"/></svg>
+      </div>
+      <div class="q-head">Have a question?</div>
+      <div class="q-sub">We’re happy to help.</div>
+      <a href="https://wa.me/37066217944" target="_blank" rel="noopener" class="wa-link">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.004c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01ZM12.04 20.15h-.004a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+        Send Message
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BOTTOM CTA ============ -->
+<section class="cta">
+  <div class="cta-palm left" aria-hidden="true"></div>
+  <div class="cta-palm right" aria-hidden="true"></div>
+  <div class="container">
+    <h3>Looking for another private option?</h3>
+    <a href="../villa-sana/" class="btn btn-gold">Discover Another Villa →</a>
+  </div>
+</section>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox">
+  <span class="lb-btn lb-close" id="lbClose">×</span>
+  <span class="lb-btn lb-prev" id="lbPrev">‹</span>
+  <span class="lb-btn lb-next" id="lbNext">›</span>
+  <img id="lbImg" src="" alt="Villa Layan gallery image">
+</div>
+
+<script src="../js/main.js?v=2"></script>
+</body>
+</html>

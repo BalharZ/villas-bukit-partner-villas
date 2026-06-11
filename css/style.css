@@ -1,0 +1,474 @@
+/* =====================================================================
+   VILLAS BUKIT — Partner Villas
+   Design system — matches Laptopview.png / Mobileview.png 1:1
+   ===================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* brand gold */
+  --gold: #ad793f;
+  --gold-2: #C49A6C;
+  --gold-deep: #936827;
+  /* ink / text */
+  --ink: #2A3138;
+  --ink-soft: #444B52;
+  --body: #6A7076;
+  --muted: #9AA0A5;
+  /* surfaces */
+  --bg: #FBFBFB;
+  --white: #FFFFFF;
+  --sand: #EFE5DD;
+  --sand-2: #F5EEE7;
+  --line: #E8E2D9;
+  --line-2: #F0EBE4;
+  /* calendar */
+  --pink: #FBDEDE;
+  --pink-soft: #FBE9E9;
+  --pink-text: #C56B6B;
+  /* type */
+  --serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --sans: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  /* metrics */
+  --maxw: 1280px;
+  --nav: 78px;
+  --radius-btn: 6px;
+  --radius-card: 12px;
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--sans);
+  color: var(--body);
+  background: var(--bg);
+  line-height: 1.7;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { max-width: 100%; height: auto; display: block; }
+[hidden] { display: none !important; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; color: inherit; }
+input, select { font-family: inherit; color: inherit; }
+
+.container { max-width: var(--maxw); margin: 0 auto; padding: 0 40px; }
+
+/* shared section label (gold uppercase) */
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.serif-title {
+  font-family: var(--serif);
+  color: var(--ink);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: 0.2px;
+}
+
+/* ===================== BUTTONS ===================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  border-radius: var(--radius-btn);
+  transition: background .25s var(--ease), color .25s var(--ease),
+              border-color .25s var(--ease), transform .2s var(--ease);
+  white-space: nowrap;
+}
+.btn-gold { background: var(--gold); color: #fff; }
+.btn-gold:hover { background: var(--gold-deep); transform: translateY(-2px); }
+.btn-ghost { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,.8); }
+.btn-ghost:hover { background: rgba(255,255,255,.14); border-color: #fff; }
+.btn-gold-outline { background: transparent; color: var(--gold); border: 1.5px solid var(--gold); }
+.btn-gold-outline:hover { background: var(--gold); color: #fff; }
+.btn-sm { padding: 12px 24px; font-size: 11px; }
+
+/* ===================== NAV ===================== */
+.navbar {
+  position: fixed; inset: 0 0 auto 0;
+  height: var(--nav);
+  background: rgba(255,255,255,.97);
+  backdrop-filter: saturate(140%) blur(6px);
+  z-index: 1000;
+  box-shadow: 0 1px 0 rgba(42,49,56,.07);
+  transition: transform .4s var(--ease);
+}
+/* full-width nav so the logo + long menu all fit on one line */
+.navbar .container { display: flex; align-items: center; justify-content: space-between; height: 100%; gap: 24px; max-width: 100%; padding: 0 34px; }
+.nav-logo { flex: 1 1 0; display: inline-flex; align-items: center; gap: 11px; }
+.nav-logo-mark { height: 42px; width: auto; flex-shrink: 0; }
+.nav-logo-text { font-family: var(--serif); font-weight: 600; text-transform: uppercase; color: var(--ink); font-size: 22px; line-height: .92; letter-spacing: 2px; }
+.nav-menu { display: flex; align-items: center; gap: 18px; flex-shrink: 1; }
+.nav-menu > a, .nav-item-dropdown > a {
+  font-size: 12px; font-weight: 500; letter-spacing: .7px;
+  text-transform: uppercase; color: var(--ink); position: relative;
+  padding: 6px 0; transition: color .2s var(--ease); white-space: nowrap;
+}
+.nav-menu > a::after, .nav-item-dropdown > a::after {
+  content: ''; position: absolute; left: 0; bottom: 0; height: 1.5px; width: 0;
+  background: var(--gold); transition: width .28s var(--ease);
+}
+.nav-menu > a:hover, .nav-item-dropdown:hover > a { color: var(--gold); }
+.nav-menu > a:hover::after, .nav-item-dropdown:hover > a::after { width: 100%; }
+.nav-menu a.active { color: var(--gold); }
+.nav-menu a.active::after { width: 100%; }
+
+.nav-item-dropdown { position: relative; }
+.nav-caret { display: inline-block; margin-left: 5px; border: 4px solid transparent; border-top-color: currentColor; transform: translateY(2px); transition: transform .25s var(--ease); }
+.nav-item-dropdown:hover .nav-caret { transform: translateY(2px) rotate(180deg); }
+.dropdown-menu {
+  position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(10px);
+  background: #fff; min-width: 210px; padding: 10px 0; margin-top: 14px;
+  box-shadow: 0 18px 44px rgba(42,49,56,.16); border-radius: 8px;
+  opacity: 0; visibility: hidden; transition: opacity .25s var(--ease), transform .25s var(--ease);
+  border-top: 2px solid var(--gold);
+}
+/* invisible bridge across the 14px gap so hover isn't lost moving from trigger to menu */
+.dropdown-menu::before { content: ''; position: absolute; left: 0; right: 0; bottom: 100%; height: 16px; }
+.nav-item-dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+.dropdown-menu a { display: block; padding: 9px 22px; font-size: 12.5px; font-weight: 500; letter-spacing: .6px; text-transform: uppercase; color: var(--ink-soft); white-space: nowrap; transition: background .2s, color .2s; }
+.dropdown-menu a:hover { background: var(--sand-2); color: var(--gold); }
+.nav-cta { margin-left: 6px; }
+.nav-cta.mobile { display: none; }
+
+.nav-right { display: flex; flex: 1 1 0; align-items: center; justify-content: flex-end; gap: 14px; }
+.nav-burger { display: none; flex-direction: column; gap: 5px; padding: 8px; cursor: pointer; }
+.nav-burger span { width: 25px; height: 2px; background: var(--ink); border-radius: 2px; transition: transform .3s var(--ease), opacity .3s var(--ease); }
+.nav-burger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-burger.active span:nth-child(2) { opacity: 0; }
+.nav-burger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* mobile slide-in menu */
+.mobile-menu { position: fixed; top: var(--nav); inset-inline: 0; bottom: 0; background: #fff; z-index: 999; padding: 22px 26px 60px; overflow-y: auto; transform: translateX(100%); transition: transform .4s var(--ease); }
+.mobile-menu.active { transform: translateX(0); }
+.mobile-menu a { display: block; padding: 15px 0; font-size: 14px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; color: var(--ink); border-bottom: 1px solid var(--line-2); }
+.mobile-menu a.active { color: var(--gold); }
+.m-sub { max-height: 0; overflow: hidden; transition: max-height .35s var(--ease); padding-left: 16px; }
+.m-sub.open { max-height: 400px; }
+.m-sub a { font-size: 12.5px; font-weight: 400; color: var(--ink-soft); }
+.m-toggle::after { content: '+'; float: right; font-size: 18px; color: var(--gold); font-weight: 400; }
+.m-toggle.open::after { content: '–'; }
+.mobile-menu .btn { display: flex; width: 100%; margin-top: 22px; }
+
+/* ===================== HERO ===================== */
+.hero { position: relative; min-height: clamp(470px, 36vw, 520px); margin-top: var(--nav); display: flex; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; transform: scale(1.06); animation: heroZoom 14s ease-out forwards; }
+/* Layan still uses the shared aerial (cropped to its own villa); Sana now has a dedicated
+   laptop photo (lounge + sea view) on desktop and a portrait reel video on mobile */
+body[data-villa="sana"] .hero-bg-photo { background-position: center; }   /* Sana laptop hero crop */
+body[data-villa="layan"] .hero-bg { background-position: left top; }      /* Layan = left villa, upper-left */
+@keyframes heroZoom { to { transform: scale(1); } }
+/* hero media swap — laptop shows the photo (above); mobile (<=760px, see media query) shows the reel */
+.hero-bg-video { display: none; background: #14181c; object-fit: cover; }
+.hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(105deg, rgba(20,24,28,.72) 0%, rgba(20,24,28,.42) 42%, rgba(20,24,28,.12) 72%, rgba(20,24,28,.04) 100%); }
+.hero .container { position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: flex-start; padding-top: 30px; padding-bottom: 40px; width: 100%; }
+.hero-inner { max-width: 640px; }
+.breadcrumb { font-size: 12.5px; color: rgba(255,255,255,.92); margin-bottom: 14px; letter-spacing: .3px; }
+.breadcrumb a { color: rgba(255,255,255,.92); transition: color .2s; }
+.breadcrumb a:hover { color: #fff; }
+.breadcrumb span { margin: 0 9px; opacity: .6; }
+.hero h1 { font-family: var(--serif); font-weight: 600; color: #fff; font-size: clamp(40px, 4.7vw, 66px); line-height: 1.04; letter-spacing: .5px; margin-bottom: 10px; }
+.hero-sub { font-family: var(--serif); font-weight: 400; color: #fff; font-size: clamp(16px, 1.7vw, 21px); line-height: 1.32; max-width: 32ch; margin-bottom: 18px; }
+.hero-specs { display: flex; align-items: center; gap: 22px; margin-bottom: 22px; }
+.hero-spec { display: flex; align-items: center; gap: 10px; color: #fff; font-size: 13.5px; font-weight: 500; letter-spacing: .3px; }
+.hero-spec svg { width: 22px; height: 22px; stroke: #fff; fill: none; stroke-width: 1.5; opacity: 1; }
+.hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+
+/* ===================== CHECK AVAILABILITY ===================== */
+/* floating white card that overlaps the hero; hero image shows in the side
+   margins (container is narrower than the full-bleed hero behind it) */
+.availability {
+  position: relative; z-index: 5; background: transparent;
+  margin-top: -150px;
+  padding: 0 0 64px;
+}
+.availability .container { display: block; background: var(--white); border-radius: 8px; box-shadow: 0 30px 70px rgba(42,49,56,.13); padding: 38px 44px 30px; }
+.avail-grid { display: grid; grid-template-columns: 1fr 264px; gap: 44px; align-items: stretch; }
+/* sits above the Smoobu iframe so its text shows while the search is pulled up tight */
+.section-head { margin-bottom: 0; position: relative; z-index: 2; }
+.section-head .eyebrow { display: block; font-size: 13px; margin-bottom: 2px; }
+.section-head .best { font-size: 12px; font-weight: 700; color: var(--ink); letter-spacing: .3px; margin: 0; }
+
+/* real Smoobu booking tool — always-visible, self-initialised; themed in Smoobu */
+.booking-tool { margin: -26px 0 -10px; min-height: 0; }
+.booking-tool iframe { max-width: 100%; border: 0; margin-left: -30px; }
+
+/* calendar */
+.calendar-wrap { background: transparent; }
+.calendar-widget { min-height: 120px; }
+.cal-legend { display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; margin-top: 12px; padding-top: 0; }
+.cal-legend span { display: flex; align-items: center; gap: 9px; font-size: 12px; color: var(--ink-soft); }
+.cal-legend i { width: 16px; height: 16px; border-radius: 3px; display: inline-block; border: 1px solid var(--line); }
+.cal-legend .av { background: #fff; }
+.cal-legend .na { background: var(--pink); border-color: #f2c9c9; }
+.cal-legend .li { background-color: #fff; background-image: linear-gradient(to right bottom, #fff 50%, var(--pink) 50%); border-color: #f1d5d5; }
+
+/* amenities column (gold line icons) */
+.amenities { display: grid; grid-template-columns: 1fr 1fr; gap: 34px 14px; align-content: center; padding-left: 40px; border-left: 1px solid var(--line-2); }
+.amenity { display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; }
+.amenity:last-child { grid-column: 1 / -1; }   /* centre the lone last icon */
+.amenity svg { width: 32px; height: 32px; stroke: var(--gold); fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.amenity svg.ico-fill { fill: var(--gold); stroke: none; }
+/* Ocean View (512 viewBox) — fatten its thin filled lines so it reads as strong as the line icons */
+.amenity svg.ico-fill[viewBox="0 0 512 512"] { stroke: var(--gold); stroke-width: 14; stroke-linejoin: round; stroke-linecap: round; }
+.amenity span { font-size: 12px; font-weight: 500; color: var(--ink-soft); letter-spacing: .2px; }
+
+/* ===================== ABOUT + GALLERY ===================== */
+.about { padding: 30px 0 64px; }
+.about .container { display: grid; grid-template-columns: 0.82fr 2fr; gap: 56px; align-items: start; }
+.about-text .eyebrow { display: block; margin-bottom: 16px; }
+.about-text h2 { font-family: var(--serif); font-weight: 600; color: var(--ink); font-size: clamp(30px, 3vw, 42px); line-height: 1.12; margin-bottom: 22px; }
+.about-text p { font-size: 13px; line-height: 1.8; margin-bottom: 13px; color: var(--ink); }
+.text-link { display: inline-flex; align-items: center; gap: 8px; color: var(--gold); font-size: 11px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; margin-top: 8px; transition: gap .25s var(--ease); }
+.text-link:hover { gap: 13px; }
+
+.gallery-block { }
+.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.gallery-item { position: relative; overflow: hidden; border-radius: 6px; cursor: pointer; aspect-ratio: 4/3; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
+.gallery-item::after { content: ''; position: absolute; inset: 0; background: rgba(20,24,28,0); transition: background .3s; }
+.gallery-item:hover img { transform: scale(1.07); }
+.gallery-item:hover::after { background: rgba(20,24,28,.16); }
+.gallery-cta { display: flex; justify-content: center; margin-top: 28px; }
+/* "+N Photos" overlay on the last visible tile — signals the full set in the lightbox */
+.gallery-more { position: absolute; inset: 0; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; background: rgba(20,24,28,.52); color: #fff; font-family: var(--serif); font-weight: 600; font-size: clamp(26px, 3vw, 34px); line-height: 1; letter-spacing: .5px; transition: background .3s var(--ease); pointer-events: none; }
+.gallery-item:hover .gallery-more { background: rgba(20,24,28,.64); }
+.gallery-more small { font-family: var(--sans); font-size: 10px; font-weight: 600; letter-spacing: 1.6px; text-transform: uppercase; opacity: .92; }
+
+/* ===================== INFO ROW ===================== */
+.info { padding: 56px 0 60px; background: #EEECE8; }
+.info .container { display: grid; grid-template-columns: 1.45fr 1fr 1.15fr 1.15fr 1fr; gap: 40px; }
+.info-col .eyebrow { display: block; margin-bottom: 20px; }
+
+/* pricing */
+.price-row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 7px 0; border-bottom: 1px solid var(--line-2); }
+.price-row:first-of-type { padding-top: 0; }
+.price-label { font-size: 12.5px; color: var(--ink); font-weight: 500; line-height: 1.3; }
+.price-label small { display: block; font-size: 10.5px; color: var(--muted); font-weight: 400; margin-top: 1px; }
+.price-val { font-family: var(--serif); font-size: 19px; font-weight: 600; color: var(--gold); white-space: nowrap; }
+.price-val span { font-family: var(--sans); font-size: 10.5px; font-weight: 500; color: var(--muted); }
+.promo { margin-top: 12px; background: var(--sand); border-radius: 8px; padding: 11px 14px; display: flex; align-items: center; justify-content: space-between; gap: 10px; border: 1px solid #E6D5C4; }
+.promo-text { font-size: 11px; color: var(--ink-soft); line-height: 1.4; }
+.promo-text b { color: var(--gold-deep); }
+.promo-badge { font-family: var(--serif); font-size: 19px; font-weight: 700; color: var(--gold); white-space: nowrap; }
+
+/* includes list */
+.includes li { display: flex; align-items: center; gap: 11px; padding: 7px 0; font-size: 13px; color: var(--ink-soft); }
+.includes li svg { width: 17px; height: 17px; stroke: var(--gold); fill: none; stroke-width: 1.6; flex-shrink: 0; }
+
+/* location */
+.loc-head { font-family: var(--serif); font-size: 19px; font-weight: 600; color: var(--ink); margin-bottom: 6px; line-height: 1.2; }
+.loc-sub { font-size: 12.5px; color: var(--ink-soft); margin-bottom: 16px; line-height: 1.6; }
+.loc-item { display: flex; align-items: center; gap: 10px; padding: 6px 0; font-size: 12.5px; color: var(--ink-soft); }
+.loc-item svg { width: 16px; height: 16px; stroke: var(--gold); fill: none; stroke-width: 1.6; flex-shrink: 0; }
+.loc-map { margin-top: 14px; }
+
+/* info text blocks */
+.info-col p { font-size: 12.5px; line-height: 1.65; margin-bottom: 10px; color: var(--ink); }
+.info-link { display: inline-flex; align-items: center; gap: 7px; color: var(--gold); font-size: 10.5px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; margin-top: 6px; transition: gap .25s var(--ease); }
+.info-link:hover { gap: 11px; }
+.pay-cards { display: flex; gap: 10px; align-items: center; margin: 14px 0 22px; }
+.pay-cards svg { height: 30px; width: auto; }
+.q-head { font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--ink); margin-bottom: 4px; }
+.q-sub { font-size: 12.5px; color: var(--ink-soft); margin-bottom: 12px; }
+/* WhatsApp "Send Message" link (gold glyph + gold caps, borderless — matches design) */
+.wa-link { display: inline-flex; align-items: center; gap: 10px; color: var(--gold); font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; transition: gap .25s var(--ease), color .2s var(--ease); }
+.wa-link svg { width: 27px; height: 27px; fill: var(--gold); flex-shrink: 0; transition: fill .2s var(--ease); }
+.wa-link:hover { color: var(--gold-deep); gap: 13px; }
+.wa-link:hover svg { fill: var(--gold-deep); }
+
+/* ===================== BOTTOM CTA ===================== */
+.cta { position: relative; background: var(--sand); overflow: hidden; }
+.cta .container { position: relative; z-index: 2; display: flex; align-items: center; justify-content: center; gap: 30px; padding-top: 30px; padding-bottom: 30px; flex-wrap: wrap; }
+.cta h3 { font-family: var(--serif); font-size: clamp(21px, 2.2vw, 27px); font-weight: 500; color: var(--ink); }
+/* palm silhouettes — palm-tree.png recoloured to a brand-brown silhouette
+   (palm-silhouette.png), faint, crown peeking from the corners */
+.cta-palm { position: absolute; top: 0; bottom: 0; width: 240px; opacity: .14; pointer-events: none;
+  background: url(../images/palm-silhouette.png) no-repeat top center; background-size: 215px auto; }
+.cta-palm.left { left: -10px; }
+.cta-palm.right { right: -10px; transform: scaleX(-1); }
+
+/* ===================== LIGHTBOX ===================== */
+.lightbox { position: fixed; inset: 0; background: rgba(18,20,23,.94); z-index: 2000; display: none; align-items: center; justify-content: center; opacity: 0; transition: opacity .3s; }
+.lightbox.active { display: flex; opacity: 1; }
+.lightbox img { max-width: 90vw; max-height: 86vh; object-fit: contain; border-radius: 3px; box-shadow: 0 20px 60px rgba(0,0,0,.5); }
+.lb-btn { position: absolute; color: #fff; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; font-size: 30px; background: rgba(255,255,255,.1); border-radius: 50%; transition: background .2s; user-select: none; }
+.lb-btn:hover { background: rgba(255,255,255,.22); }
+.lb-close { top: 26px; right: 26px; font-size: 26px; }
+.lb-prev { left: 26px; top: 50%; transform: translateY(-50%); }
+.lb-next { right: 26px; top: 50%; transform: translateY(-50%); }
+
+/* ===================== BOOKING POPUP ===================== */
+.modal { position: fixed; inset: 0; z-index: 2100; display: none; align-items: center; justify-content: center; padding: 20px; }
+.modal.active { display: flex; }
+.modal-overlay { position: absolute; inset: 0; background: rgba(18,20,23,.6); opacity: 0; transition: opacity .3s; }
+.modal.active .modal-overlay { opacity: 1; }
+.modal-box { position: relative; background: #fff; width: 100%; max-width: 720px; max-height: 88vh; border-radius: 12px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,.35); transform: translateY(16px) scale(.98); opacity: 0; transition: transform .35s var(--ease), opacity .35s var(--ease); display: flex; flex-direction: column; }
+.modal.active .modal-box { transform: none; opacity: 1; }
+.modal-head { display: flex; align-items: center; justify-content: space-between; padding: 18px 22px; border-bottom: 1px solid var(--line); }
+.modal-head h4 { font-family: var(--serif); font-size: 22px; font-weight: 600; color: var(--ink); }
+.modal-close { font-size: 26px; color: var(--ink-soft); line-height: 1; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background .2s; }
+.modal-close:hover { background: var(--sand-2); }
+.modal-body { padding: 0; overflow: auto; }
+.modal-body iframe { width: 100%; min-height: 560px; border: 0; display: block; }
+
+/* ===================== SCROLL ANIMATIONS ===================== */
+.reveal { opacity: 0; transform: translateY(26px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+.reveal.visible { opacity: 1; transform: none; }
+.reveal-l { opacity: 0; transform: translateX(-28px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+.reveal-l.visible { opacity: 1; transform: none; }
+.reveal-r { opacity: 0; transform: translateX(28px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+.reveal-r.visible { opacity: 1; transform: none; }
+.reveal[data-d="1"], .reveal-l[data-d="1"], .reveal-r[data-d="1"] { transition-delay: .08s; }
+.reveal[data-d="2"] { transition-delay: .16s; }
+.reveal[data-d="3"] { transition-delay: .24s; }
+.reveal[data-d="4"] { transition-delay: .32s; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-l, .reveal-r, .hero-bg { opacity: 1 !important; transform: none !important; animation: none !important; transition: none !important; }
+}
+
+/* ===================== SMOOBU CALENDAR RESTYLE =====================
+   Smoobu injects its own DOM + a cross-origin stylesheet that targets the
+   apartment id (#smoobuApartmentXXX …) with !important — so we scope every
+   override to our own #calWrap id + the stable .calendarWidget class to win
+   the cascade. Live availability data is preserved; we only re-skin it.
+   Smoobu day classes → design's 3 legend states:
+     td.normal              → "Not available"        (solid soft pink)
+     td.arrival/.departure  → "Available from 13:00" (diagonal half-split)
+     td with number, no class → "Available"          (white)            */
+
+/* kill Smoobu's grey panel — the calendar must sit on the card's white */
+#calWrap, #calWrap .calendarWidget, #calWrap .calendarContent,
+#calWrap .multiCalendarWidget, #calWrap .fullCalendar,
+#calWrap .calendar { background: transparent !important; box-shadow: none !important; }
+
+/* two months side by side, centred */
+/* Smoobu's multiCalendarWidget also carries a global-colliding `container` class
+   (adds 44px side padding) — neutralise so the calendar fills the column and
+   left-aligns with the eyebrow / search bar */
+#calWrap .multiCalendarWidget { display: flex !important; flex-wrap: wrap !important; justify-content: space-between !important; gap: 14px 44px !important; padding: 0 !important; max-width: none !important; font-family: var(--sans) !important; color: var(--ink) !important; }
+#calWrap .fullCalendar { flex: 1 1 280px !important; max-width: none !important; }
+#calWrap .calendar { width: 100% !important; margin: 0 !important; font-family: var(--sans) !important; }
+
+/* month header: compact "May 2026" on one line (DOM is "2026" then h2 month,
+   so row-reverse renders month first), gold chevrons pinned to the edges */
+#calWrap .calendar .header { position: relative !important; display: flex !important; flex-direction: row-reverse !important; justify-content: center !important; align-items: baseline !important; gap: 6px !important; min-height: 38px !important; padding: 2px 42px !important; margin-bottom: 10px !important; }
+#calWrap .calendar #firstPartHeader { font-family: var(--sans) !important; font-size: 14px !important; font-weight: 600 !important; letter-spacing: .3px !important; color: var(--ink-soft) !important; }
+#calWrap .calendar #secondPartHeader { display: inline !important; position: static !important; }
+#calWrap .calendar #secondPartHeader h2 { display: inline !important; font-family: var(--sans) !important; font-size: 14px !important; font-weight: 600 !important; line-height: 1.2 !important; letter-spacing: .3px !important; text-transform: none !important; color: var(--ink-soft) !important; margin: 0 !important; }
+#calWrap .calendar .btn-prev,
+#calWrap .calendar .btn-next { position: absolute !important; top: 50% !important; transform: translateY(-50%) !important; width: 34px !important; height: 34px !important; margin: 0 !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; border-radius: 50% !important; transition: background .2s var(--ease) !important; }
+#calWrap .calendar .btn-prev:hover,
+#calWrap .calendar .btn-next:hover { background: var(--sand-2) !important; }
+#calWrap .calendar .btn-prev { left: 0 !important; right: auto !important; }
+#calWrap .calendar .btn-next { right: 0 !important; left: auto !important; }
+#calWrap .calendar .btn-prev img,
+#calWrap .calendar .btn-next img { display: none !important; }
+#calWrap .calendar .btn-prev::after,
+#calWrap .calendar .btn-next::after { content: '' !important; width: 9px !important; height: 9px !important; border-top: 2px solid var(--gold) !important; border-right: 2px solid var(--gold) !important; }
+#calWrap .calendar .btn-prev::after { transform: rotate(-135deg) !important; margin-left: 4px !important; }
+#calWrap .calendar .btn-next::after { transform: rotate(45deg) !important; margin-right: 4px !important; }
+/* hide the first calendar's "next" (it would sit between the two months) */
+#calWrap .calendar .btn-next.first { display: none !important; }
+
+/* grid */
+#calWrap .calendarWidget table { width: 100% !important; border-collapse: collapse !important; table-layout: fixed !important; margin: 0 !important; }
+#calWrap .calendarWidget thead td { text-transform: uppercase !important; font-family: var(--sans) !important; font-size: 10.5px !important; font-weight: 700 !important; letter-spacing: 1px !important; color: var(--ink-soft) !important; background: #F7F6F3 !important; border: 1px solid var(--line-2) !important; height: 30px !important; line-height: 30px !important; padding: 0 !important; text-align: center !important; }
+/* weekend day-names in gold (Sa, Su) to match the design */
+#calWrap .calendarWidget thead td:nth-child(6),
+#calWrap .calendarWidget thead td:nth-child(7) { color: var(--gold) !important; }
+
+/* day cells — default = Available (white) */
+#calWrap .calendarWidget tbody td { width: 14.2857% !important; height: 38px !important; line-height: 38px !important; padding: 0 !important; font-family: var(--sans) !important; font-size: 13px !important; font-weight: 500 !important; text-align: center !important; color: var(--ink) !important; background: #fff !important; background-image: none !important; border: 1px solid var(--line-2) !important; text-decoration: none !important; }
+#calWrap .calendarWidget tbody td:empty { background: transparent !important; border-color: transparent !important; }
+/* Not available */
+#calWrap .calendarWidget tbody td.normal { background: var(--pink) !important; background-image: none !important; color: var(--pink-text) !important; }
+/* "Available from 13:00" — half-day check-in / check-out transition days.
+   Single 50/50 diagonal split (pink half = booked, white half = bookable),
+   mirroring Smoobu's own original rendering: arrival = booking starts later
+   in the day (white top-left → pink bottom-right); departure = booking ends
+   in the morning (pink top-left → white bottom-right). */
+#calWrap .calendarWidget tbody td.arrival { color: var(--pink-text) !important; background-color: #fff !important; background-image: linear-gradient(to right bottom, #fff 50%, var(--pink) 50%) !important; }
+#calWrap .calendarWidget tbody td.departure { color: var(--pink-text) !important; background-color: #fff !important; background-image: linear-gradient(to right bottom, var(--pink) 50%, #fff 50%) !important; }
+/* today */
+#calWrap .calendarWidget tbody td.current-day { box-shadow: inset 0 0 0 2px var(--gold) !important; color: var(--gold) !important; font-weight: 700 !important; }
+
+/* Smoobu attribution — hidden per request */
+#calWrap .logo { display: none !important; }
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 1180px) {
+  .nav-menu { gap: 16px; }
+  .nav-menu > a, .nav-item-dropdown > a { font-size: 11.5px; letter-spacing: .6px; }
+}
+@media (max-width: 1024px) {
+  .nav-menu { display: none; }
+  .nav-right { display: flex; }
+  .nav-cta.desktop { display: none; }
+  .nav-cta.mobile { display: inline-flex; }
+  .nav-burger { display: flex; }
+  .avail-grid { grid-template-columns: 1fr; gap: 32px; }
+  .amenities { grid-template-columns: repeat(4, 1fr); align-content: start; padding-left: 0; border-left: none; padding-top: 30px; border-top: 1px solid var(--line-2); }
+  .amenity:last-child { grid-column: auto; }
+  .about .container { grid-template-columns: 1fr; gap: 34px; }
+  .gallery { grid-template-columns: repeat(3, 1fr); }
+  .info .container { grid-template-columns: 1fr 1fr; gap: 36px 40px; }
+}
+@media (max-width: 760px) {
+  :root { --nav: 64px; }
+  .container { padding: 0 22px; }
+  .nav-logo-mark { height: 34px; }
+  .nav-logo-text { font-size: 18px; letter-spacing: 1.5px; }
+  .hero { min-height: 86vh; }
+  /* swap the laptop photo for the portrait reel video */
+  .hero-bg-photo { display: none; }
+  .hero-bg-video { display: block; width: 100%; height: 100%; object-fit: cover; transform: none; animation: none; }
+  .hero::after { background: linear-gradient(to bottom, rgba(20,24,28,.28) 0%, rgba(20,24,28,.5) 58%, rgba(20,24,28,.74) 100%); }
+  /* breadcrumb pinned to the top of the hero; title + specs + CTAs at the bottom */
+  .hero .container { justify-content: flex-end; padding-bottom: 60px; }
+  .hero-inner { display: flex; flex-direction: column; flex: 1 1 auto; width: 100%; }
+  .breadcrumb { margin-bottom: auto; }
+  /* specs: icon stacked above each label, evenly spread across the row */
+  .hero-specs { gap: 12px; justify-content: space-between; width: 100%; }
+  .hero-spec { flex-direction: column; gap: 7px; text-align: center; }
+  /* CTAs stacked full-width */
+  .hero-buttons { flex-direction: column; width: 100%; }
+  .hero-buttons .btn { width: 100%; flex: none; }
+  /* on mobile the card barely overlaps and runs full width */
+  .availability { margin-top: -32px; }
+  .availability .container { padding: 26px 20px 24px; border-radius: 14px; }
+  /* centre the Smoobu search bar */
+  .booking-tool { text-align: center; margin: 2px 0 8px; }
+  .booking-tool iframe { margin-left: 0; margin-right: 0; }
+  /* calendar: both months stacked and centred */
+  #calWrap .multiCalendarWidget { flex-direction: column !important; align-items: center !important; gap: 28px !important; }
+  #calWrap .fullCalendar { width: 100% !important; max-width: 340px !important; flex: 0 0 auto !important; }
+  /* legend left-aligned (Limited availability wraps to its own line on the left) */
+  .cal-legend { justify-content: flex-start; gap: 12px 22px; }
+  /* amenities: 3 per row, lone last icon centred */
+  .amenities { grid-template-columns: repeat(3, 1fr); gap: 26px 10px; }
+  .amenities .amenity:last-child { grid-column: 1 / -1; }
+  .gallery { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .gallery-item { aspect-ratio: 4/3; }
+  .info .container { grid-template-columns: 1fr; gap: 34px; padding-top: 36px; }
+  .cta .container { flex-direction: column; gap: 20px; text-align: center; }
+  .cta-palm { width: 150px; }
+}
+@media (max-width: 420px) {
+  .container { padding: 0 16px; }
+}
