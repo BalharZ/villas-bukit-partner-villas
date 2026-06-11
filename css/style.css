@@ -171,10 +171,12 @@ input, select { font-family: inherit; color: inherit; }
 /* Layan still uses the shared aerial (cropped to its own villa); Sana now has a dedicated
    laptop photo (lounge + sea view) on desktop and a portrait reel video on mobile */
 body[data-villa="sana"] .hero-bg-photo { background-position: center; }   /* Sana laptop hero crop */
-body[data-villa="layan"] .hero-bg { background-position: left top; }      /* Layan = left villa, upper-left */
+body[data-villa="layan"] .hero-bg-photo { background-position: center; }      /* Layan desktop = terrace + sea view */
+body[data-villa="layan"] .hero-bg-photo-m { background-position: center; }    /* Layan mobile = pool + hat (vertical) */
 @keyframes heroZoom { to { transform: scale(1); } }
 /* hero media swap — laptop shows the photo (above); mobile (<=760px, see media query) shows the reel */
 .hero-bg-video { display: none; background: #14181c; object-fit: cover; }
+.hero-bg-photo-m { display: none; }   /* Layan mobile photo — shown only <=760px (see media query) */
 .hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(105deg, rgba(20,24,28,.72) 0%, rgba(20,24,28,.42) 42%, rgba(20,24,28,.12) 72%, rgba(20,24,28,.04) 100%); }
 .hero .container { position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: flex-start; padding-top: 30px; padding-bottom: 40px; width: 100%; }
 .hero-inner { max-width: 640px; }
@@ -446,6 +448,7 @@ body[data-villa="layan"] .hero-bg { background-position: left top; }      /* Lay
   .hero { min-height: 86vh; }
   /* swap the laptop photo for the portrait reel video */
   .hero-bg-photo { display: none; }
+  .hero-bg-photo-m { display: block; }
   .hero-bg-video { display: block; width: 100%; height: 100%; object-fit: cover; transform: none; animation: none; }
   .hero::after { background: linear-gradient(to bottom, rgba(20,24,28,.28) 0%, rgba(20,24,28,.5) 58%, rgba(20,24,28,.74) 100%); }
   /* breadcrumb pinned to the top of the hero; title + specs + CTAs at the bottom */
